@@ -1,0 +1,12 @@
+  gateway:
+    build:
+      context: ./gateway
+      dockerfile: Dockerfile
+    ports:
+      - "8222:8222"
+    networks:
+      - my_network
+      
+  networks:
+  my_network:
+    driver: bridge
