@@ -1,12 +1,12 @@
-  gateway:
+  bag-service:
     build:
-      context: ./gateway
+      context: ./bag-service
       dockerfile: Dockerfile
     ports:
-      - "8222:8222"
+      - "8093:8093"
     networks:
       - my_network
       
-  networks:
+networks:
   my_network:
     driver: bridge
